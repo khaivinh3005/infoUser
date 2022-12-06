@@ -51,7 +51,12 @@ elementSubmit.addEventListener('click', function () {
   var randomNumber = Math.random();
 
   if (/\d/.test(name) || !name) {
-    alert('Value phải là chữ không bao gồm số');
+    Swal.fire({
+      title: 'Error!',
+      text: 'Value phải là chữ không bao gồm số',
+      icon: 'error',
+      confirmButtonText: 'Cool',
+    });
   } else {
     var newItem = {
       name: name,
